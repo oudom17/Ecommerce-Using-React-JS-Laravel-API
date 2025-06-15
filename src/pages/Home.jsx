@@ -10,7 +10,7 @@ const Home = () => {
       {/* Mount */}
 
       <Hero />
-      <LatestCollection />
+      {/* <LatestCollection /> */}
       <BestSeller />
       <OurPolicy />
       {/* <NewsletterBox /> */}

@@ -1,13 +1,16 @@
-import { createContext, useEffect, useState } from "react";
-import { products } from "../assets/assets";
+import { createContext, useContext, useEffect, useState } from "react";
+// import { products } from "../assets/assets";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
+import { useProducts } from "../context/ProductContext";
 
 export const ShopContext = createContext();
 
 const ShopContextProvider = (props) => {
   const currency = "$";
   const delivery_fee = 20;
+
+  const { products } = useProducts();
 
   const [search, setSearch] = useState("");
   const [showSearch, setShowSearch] = useState(false);
